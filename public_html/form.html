@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TravelNow</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="travel-13-512.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+            <style>
+                body {
+                    padding-top: 50px;
+                    padding-bottom: 20px;
+                    background: #c4e3f3;
+                    font-family: sans-serif;    
+                }
+                #p1 {background-color: hsla(120, 100%, 50%, 0.3);}
+                table {
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 80%;
+                }
+                td, th {
+                    border: 1px solid #dddddd;
+                    text-align: left;
+                    padding: 8px;
+                }
+                tr:nth-child(even) {
+                    background-color: #dddddd;
+                }
+                input, textarea { 
+                    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+                    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+                    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+                    text-align: left;
+                    padding: 9px; 
+                    border: solid 1px #E5E5E5; 
+                    outline: 0; 
+                    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+                    background: #FFFFFF url('bg_form.png') left top repeat-x; 
+                    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
+                    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
+                } 
+                textarea { 
+                    width: 400px; 
+                    max-width: 400px; 
+                    height: 100px; 
+                    line-height: 150%; 
+                }
+                input:hover, textarea:hover, 
+                input:focus, textarea:focus { 
+                    border-color: #C9C9C9; 
+                    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+                } 
+                input:invalid {
+                    color: red;
+                }
+                input:focus:valid {
+                    color: green;
+                }
+                .form label { 
+                    margin-left: 10px; 
+                    color: #999999; 
+                } 
+                .submit input { 
+                    width: auto; 
+                    padding: 9px 15px; 
+                    background: #617798; 
+                    border: 0; 
+                    font-size: 14px; 
+                    color: #FFFFFF; 
+                }
+                input[type=radio],input[type=checkbox],
+                input.radio ,input.checkbox{
+                    float: left;
+                    clear: none;
+                    margin: 2px 0 0 2px;
+                }
+
+                body,h1,h2,h3,h4,h5,h6 {font-family: Verdana, Helvetica, sans-serif}
+            </style>
+            <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+                <link rel="stylesheet" href="css/main.css">
+                    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+                    <script type="text/javascript" src="js/comment.js"></script>
+
+                    </head>
+                    <body>
+                        
+                        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                            <div class="container">
+                                <div class="navbar-left">
+                                    <img src="travel-13-512.png" alt="Icon" style="width:50px;height:50px;">  
+                                </div>
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">TravelNow</a>
+                                </div>
+                                <ul class="nav navbar-nav">
+                                    <li><a href="index.html" id="home">Home</a></li>
+                                    <li><a href="partners.html" title="Partners" id="partn">Partners</a></li>
+                                    <li><a href="route.html" id="routepl">Route Planning</a></li>
+                                    <li><a href="form.html" id="subscr">Subscribe to our Newsletter</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a onclick="changeTrForm()">TR</a></li><script type="text/javascript" src="js/language.js"></script>
+                                    <li><a onclick="changeEngForm()">EN</a></li><script type="text/javascript" src="js/language.js"></script>
+                                </ul>
+                            </div>
+                        </nav>
+                    <div>
+                        <div class="container">
+                            <p> </p>
+                            <h1 id="subnews"> Subscribe to our newsletter!</h1>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <fieldset>
+                            <form id="form1" name="form1" data-toggle="validator" role="form" data-disable="false" onsubmit="return commentThis()" action="mailto:you@yourdmainhere.com" method="POST">
+                                <div class="form-group">
+                                    <h5 style="font-weight: bold" id="fname">First name:</h5>
+                                    <input autocomplete="off" type="text" id="firstName" class="form-control" style="width:300px" name="firstName" pattern="[A-Za-z ]{1,20}" placeholder="First name"  data-required-error="So, you forgot your name eh?" required autofocus>
+                                        <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group">
+                                    <h5 style="font-weight: bold" id="lname">Last name:</h5>
+                                    <input autocomplete="off" type="text" class="form-control" style="width:300px" pattern="[A-Za-z]{1,20}" name="lastName" placeholder="Last name" data-required-error="You must have a lastname right?" required>
+                                        <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <h5 style="font-weight: bold" id="mailtitle">E-mail address:</h5>
+                                    <input autocomplete="off" type="email" class="form-control" name="email" style="width:300px" placeholder="user@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" data-error="Email address is invalid" required>
+                                        <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group">
+                                    <h5 style="font-weight: bold" id="bdaytitle">Birth day:</h5>
+                                    <input type="date" name="birth" class="form-control" style="width:300px" max="2010-05-01">
+                                        <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group">
+                                    <h5 style="font-weight: bold" id="freq">Select the frequency of the newsletter:</h5>
+                                    <input type="radio" name="freq" checked >
+                                        <p id="daily">Daily</p>
+                                        <input type="radio" name="freq" >
+                                            <p id="week">Weekly</p>
+                                            <input type="radio" name="freq" >
+                                                <p id="highli">Highlights</p>
+                                                <div class="help-block with-errors"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h5 style="font-weight: bold" id="comms">Comments and other stuff you want to tell us:</h5>
+                                                    <textarea rows="4" cols="50" name="comment" id="comm" placeholder="Let us know what you think!" form="form1"></textarea>
+                                                </div>
+                                                <div class="form-group">
+
+                                                    <input type="checkbox" name="checkbox" data-error="Have to accept these conditions sorry" required>
+                                                        <p id="terms"> I accept the terms and conditions.   </p>     
+
+                                                        <div class="help-block with-errors"></div>
+                                                </div>
+                                
+                                                <input class="btn btn-default" type="submit" id="btnsubs" value="Subscribe!">
+                                                    </form>
+                                                    </fieldset>
+                                                    </div>
+                                                    <hr>
+                                                    <footer>
+                                                        <br>
+                                                        <p>&copy; TravelNow 2018 _ Dilara Ademoglu</p>
+                                                    </footer>
+                                                    </body>
+                                                    </html>

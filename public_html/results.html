@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TravelNow</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="travel-13-512.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+            <style>
+                body {
+                    padding-top: 50px;
+                    padding-bottom: 20px;
+                    background: #c4e3f3;
+                    font-family: sans-serif;    
+                }
+                #p1 {background-color: hsla(120, 100%, 50%, 0.3);}
+                table {
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 80%;
+                }
+                td, th {
+                    border: 1px solid #dddddd;
+                    text-align: left;
+                    padding: 8px;
+                }
+                tr:nth-child(even) {
+                    background-color: #dddddd;
+                }
+
+                body,h1,h2,h3,h4,h5,h6 {font-family: Verdana, Helvetica, sans-serif}
+            </style>
+            <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+                <link rel="stylesheet" href="css/main.css">
+                    <script src="js/main.js"></script>
+                    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+                    </head>
+                    <body>
+                        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                            <div class="container">
+                                <div class="navbar-left">
+                                    <img src="travel-13-512.png" alt="Icon" style="width:50px;height:50px;">  
+                                </div>
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">TravelNow</a>
+                                </div>
+                                <ul class="nav navbar-nav">
+                                    <li><a href="index.html" id="home">Home</a></li>
+                                    <li><a href="partners.html" title="Partners" id="partn">Partners</a></li>
+                                    <li><a href="route.html" id="routepl">Route Planning</a></li>
+                                    <li><a href="form.html" id="subscr">Subscribe to our Newsletter</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a onclick="changeTrRes()">TR</a></li><script type="text/javascript" src="js/language.js"></script>
+                                    <li><a onclick="changeEngRes()">EN</a></li><script type="text/javascript" src="js/language.js"></script>
+                                </ul>
+                            </div>
+                        </nav>
+
+                    <div class="container">
+                        <p></p>
+                        <h1 id="routeopt">Check out your options! </h1>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3 id="start">Starting location:</h3>
+                                <p> </p>
+                                <input type="text" name="location" id="location" value="London" required>
+                                    <h3 id="dest">Destination:</h3>
+                                    <p> </p>
+                                    <input type="text" name="destination" id="destina" value="Amsterdam" required>
+                                        <p> </p>
+                                        </div>
+                                        <p></p>
+                                        <div class="col-md-4">
+                                            <h3 id="dat">Date:</h3> <input type="date" value="2018-05-11">
+                                                <p> </p>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="container">
+                                            <table>
+                                                <tr>
+                                                    <th id="from">From</th>
+                                                    <th id="tooo">To</th>
+                                                    <th id="anystop">Middle stops</th>
+                                                    <th id="money">Price</th>
+                                                    <th id="vehicle">Transportation</th>
+                                                    <th id="timelord">Duration</th>
+                                                    <th id="leaving">Departure</th>
+                                                    <th id="imhome">Arrival</th>
+                                                    <th id="pickme">Select</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>London</td>
+                                                    <td>Amsterdam</td>
+                                                    <td>Transfer at Paris</td>
+                                                    <td>89 Euro</td>
+                                                    <td>Flight, T Airlines</td>
+                                                    <td>6h 25m</td>
+                                                    <td>15:15</td>
+                                                    <td>21:40</td>
+                                                    <td><input type="checkbox"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>London</td>
+                                                        <td>Amsterdam</td>
+                                                        <td>-</td>
+                                                        <td>100 Euro</td>
+                                                        <td>Flight, CheapAir</td>
+                                                        <td>2h 15m</td>
+                                                        <td>21:15</td>
+                                                        <td>23:30</td>
+                                                        <td><input type="checkbox"></td>
+                                                        </tr>
+
+
+                                                        </table>
+                                                        <p><a class="btn btn-default" id="goon" href="#" role="button">Continue to webpage! &raquo;</a></p>
+
+                                                        </div>
+                                                        <hr>
+                                                        <footer>
+                                                            <br>
+                                                            <p>&copy; TravelNow 2018 _ Dilara Ademoglu</p>
+                                                        </footer>
+                                                        </body>
+
+                                                        </html>
